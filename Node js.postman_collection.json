@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "d12a37c2-f400-4a9f-9102-6f0c90222512",
+		"name": "Node js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14423028"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Add Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\": \"12345\",\r\n    \"firstName\": \"Sarita\",\r\n    \"lastName\": \"yadav\",\r\n    \"emailId\": \"sarita@gmail.com\",\r\n    \"orgName\": \"sarita\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employee/addemployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"addemployee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Employee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empID\": \"12345\",\r\n    \"firstName\": \"Sarita\",\r\n    \"lastName\": \"yadav\",\r\n    \"emailId\": \"sarita@gmail.com\",\r\n    \"orgName\": \"sarita\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/employee/addemployee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employee",
+										"addemployee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-QyCTIyXC/t6//KeZ5tFtxI0sReQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jun 2022 07:49:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Added Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Employee with Authorised access token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY1NzMwNjksImV4cCI6MTY1NjU3NjY2OX0.oPCmupe5RKFwBdBxEDA2B-XX8P6wICFW7JvR0BSkPDE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\":\"62bd2d57fbae057cf44a82fd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employee/show",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"show"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\": \"62bd2d57fbae057cf44a82fd\",\r\n    \"firstName\": \"santosh\",\r\n    \"lastName\": \"mallah\",\r\n    \"emailId\": \"santosh@gmail.com\",\r\n    \"orgName\": \"abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employee/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\":\"62bd26677f7f14a61995956d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employee/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All user Pagination",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY1NzMwNjksImV4cCI6MTY1NjU3NjY2OX0.oPCmupe5RKFwBdBxEDA2B-XX8P6wICFW7JvR0BSkPDE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employee?page=1&limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All user Pagination",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/employee?page=1&limit=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employee"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "605"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25d-9M3y0RgEAwoH2LcxEopys9wm51E\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jun 2022 07:55:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"docs\": [\n            {\n                \"_id\": \"62bd2d57fbae057cf44a82fd\",\n                \"empID\": \"1234\",\n                \"firstName\": \"sarita\",\n                \"lastName\": \"yadav\",\n                \"emailId\": \"sarita@gmail.com\",\n                \"orgName\": \"sarita\",\n                \"createdAt\": \"2022-06-30T04:57:59.818Z\",\n                \"updatedAt\": \"2022-06-30T04:57:59.818Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"62bd2d58fbae057cf44a82ff\",\n                \"empID\": \"1234\",\n                \"firstName\": \"sarita\",\n                \"lastName\": \"yadav\",\n                \"emailId\": \"sarita@gmail.com\",\n                \"orgName\": \"sarita\",\n                \"createdAt\": \"2022-06-30T04:58:00.664Z\",\n                \"updatedAt\": \"2022-06-30T04:58:00.664Z\",\n                \"__v\": 0\n            }\n        ],\n        \"totalDocs\": 8,\n        \"limit\": 2,\n        \"totalPages\": 4,\n        \"page\": 1,\n        \"pagingCounter\": 1,\n        \"hasPrevPage\": false,\n        \"hasNextPage\": true,\n        \"prevPage\": null,\n        \"nextPage\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "SortBy API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY1NzU2NTQsImV4cCI6MTY1NjU3OTI1NH0.WKt_72Q65hXD9YhlwXVF9MS1QPwXeWr80newH-msSKc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employee/filter?sortBy=firstName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "firstName"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SortBy API",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/employee/filter?sortBy=firstName",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"employee",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "firstName"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1806"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"70e-7qS6WVoEW89ykP50R6Ut6QcbguM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jun 2022 07:54:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": [\n        {\n            \"_id\": \"62bd55c22633d27aa07f2785\",\n            \"empID\": \"42365\",\n            \"firstName\": \"ASarita\",\n            \"lastName\": \"A\",\n            \"emailId\": \"asarita@gmail.com\",\n            \"orgName\": \"asarita\",\n            \"createdAt\": \"2022-06-30T07:50:26.341Z\",\n            \"updatedAt\": \"2022-06-30T07:50:26.341Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62bd557e2633d27aa07f2783\",\n            \"empID\": \"12345\",\n            \"firstName\": \"Sarita\",\n            \"lastName\": \"yadav\",\n            \"emailId\": \"sarita@gmail.com\",\n            \"orgName\": \"sarita\",\n            \"createdAt\": \"2022-06-30T07:49:18.097Z\",\n            \"updatedAt\": \"2022-06-30T07:49:18.097Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62bd55d12633d27aa07f2787\",\n            \"empID\": \"963\",\n            \"firstName\": \"bSarita\",\n            \"lastName\": \"b\",\n            \"emailId\": \"bsarita@gmail.com\",\n            \"orgName\": \"bsarita\",\n            \"createdAt\": \"2022-06-30T07:50:41.384Z\",\n            \"updatedAt\": \"2022-06-30T07:50:41.384Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62bd33d87f5e3d023345b61a\",\n            \"empID\": \"1234\",\n            \"firstName\": \"mallah\",\n            \"lastName\": \"yadav\",\n            \"emailId\": \"sarita@gmail.com\",\n            \"orgName\": \"sarita\",\n            \"createdAt\": \"2022-06-30T05:25:44.830Z\",\n            \"updatedAt\": \"2022-06-30T05:25:44.830Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62bd34147f5e3d023345b61d\",\n            \"empID\": \"12345\",\n            \"firstName\": \"mallah\",\n            \"lastName\": \"yadav\",\n            \"emailId\": \"sarita@gmail.com\",\n            \"orgName\": \"sarita\",\n            \"createdAt\": \"2022-06-30T05:26:44.599Z\",\n            \"updatedAt\": \"2022-06-30T05:26:44.599Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62bd2d57fbae057cf44a82fd\",\n            \"empID\": \"1234\",\n            \"firstName\": \"sarita\",\n            \"lastName\": \"yadav\",\n            \"emailId\": \"sarita@gmail.com\",\n            \"orgName\": \"sarita\",\n            \"createdAt\": \"2022-06-30T04:57:59.818Z\",\n            \"updatedAt\": \"2022-06-30T04:57:59.818Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62bd2d58fbae057cf44a82ff\",\n            \"empID\": \"1234\",\n            \"firstName\": \"sarita\",\n            \"lastName\": \"yadav\",\n            \"emailId\": \"sarita@gmail.com\",\n            \"orgName\": \"sarita\",\n            \"createdAt\": \"2022-06-30T04:58:00.664Z\",\n            \"updatedAt\": \"2022-06-30T04:58:00.664Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62bd2d59fbae057cf44a8301\",\n            \"empID\": \"1234\",\n            \"firstName\": \"sarita\",\n            \"lastName\": \"yadav\",\n            \"emailId\": \"sarita@gmail.com\",\n            \"orgName\": \"sarita\",\n            \"createdAt\": \"2022-06-30T04:58:01.419Z\",\n            \"updatedAt\": \"2022-06-30T04:58:01.419Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailId\":\"sarita@gmail.com\",\r\n    \"password\":\"sarita\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"emailId\":\"sarita@gmail.com\",\r\n    \"password\":\"sarita\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-mvvRGQhv1xevdmuuT6noE3yEY9s\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jun 2022 07:54:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login SuccessFull\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY1NzU2NTQsImV4cCI6MTY1NjU3OTI1NH0.WKt_72Q65hXD9YhlwXVF9MS1QPwXeWr80newH-msSKc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Registeration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Sarita\",\r\n    \"lastName\": \"yadav\",\r\n    \"emailId\": \"sarita@gmail.com\",\r\n    \"password\": \"sarita\",\r\n    \"empID\": \"4568\",\r\n    \"orgName\": \"sarita\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Registeration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Sarita\",\r\n    \"lastName\": \"yadav\",\r\n    \"emailId\": \"sarita@gmail.com\",\r\n    \"password\": \"sarita\",\r\n    \"empID\": \"4568\",\r\n    \"orgName\": \"sarita\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-QyCTIyXC/t6//KeZ5tFtxI0sReQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jun 2022 07:53:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Added Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User List With Authenticated Access token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY1NzU5NDAsImV4cCI6MTY1NjU3OTU0MH0.I0QXMMq3nnvyY08KTeKXF7NXPT3bZmjrwZ5wY_vodFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/userlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"userlist"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/userlist",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"userlist"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b8-4f/Q36nBz1tDebHv6iWkqoAs9ds\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jun 2022 07:56:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": [\n        {\n            \"_id\": \"62bd568efeb3e711ec1801fc\",\n            \"emailId\": \"sarita@gmail.com\",\n            \"password\": \"sarita\",\n            \"createdAt\": \"2022-06-30T07:53:50.232Z\",\n            \"updatedAt\": \"2022-06-30T07:53:50.232Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empID\":\"62bd2b0a99a50d2f4382c1b7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/deleteuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"deleteuser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
